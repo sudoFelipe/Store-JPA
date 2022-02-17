@@ -13,8 +13,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+@AllArgsConstructor @NoArgsConstructor
 
 //Esta anotação serve para indicar o mapeamento de uma classe objeto no banco de dados
 //Comunicação informando que essa classe é uma tabela do nosso database que à representa
@@ -23,6 +27,9 @@ import lombok.Setter;
 //Renomeação de tabela de Produto (nome da classe) para -> Produtos
 @Table(name = "Produtos")
 @NamedQuery(name = "Produto.produtosCategoria", query = "SELECT p FROM Produto p WHERE p.nome = :name")
+
+//Herança com tabela única (Single_table)
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 
 public class Produto {
 

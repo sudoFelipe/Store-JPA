@@ -20,4 +20,13 @@ public class Categoria {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Getter @Setter private Long id;
 	@Getter @Setter private String nome;
+	
+	//EXEMPOLO DE CHAVE COMPOSTA
+//	//Chave primária composta com 2 dados
+//	@EmbeddedId
+//	@Getter @Setter private CategoriaId id;
+//	
+//	public Categoria(String nome) {
+//		this.id = new CategoriaId("Eletrodomésticos", "XPTO");
+//	}
 }

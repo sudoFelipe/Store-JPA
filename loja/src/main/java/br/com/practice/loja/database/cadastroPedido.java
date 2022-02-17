@@ -84,7 +84,7 @@ public class cadastroPedido {
 		produto.setPreco(new BigDecimal("150"));
 		produto.setCategoria(new Categoria(null, "Games"));
 		
-		Cliente cliente = new Cliente(null, "Joãozinho", "69365487897");
+		Cliente cliente = new Cliente("Joãozinho", "69365487897");
 		
 		
 		EntityManager em = JPAUtil.getEntityManager();
